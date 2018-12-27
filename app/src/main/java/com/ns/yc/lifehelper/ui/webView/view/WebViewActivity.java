@@ -38,7 +38,7 @@ import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.ns.yc.lifehelper.R;
 import com.ns.yc.lifehelper.api.key.AppKey;
-import com.ns.yc.lifehelper.base.mvp1.BaseActivity;
+import com.ns.yc.lifehelper.base.mvp.BaseActivity;
 import com.ns.yc.lifehelper.ui.webView.js.JsAppInterface;
 import com.ns.yc.lifehelper.utils.AppUtil;
 import com.ns.yc.lifehelper.utils.DoShareUtils;
@@ -313,6 +313,7 @@ public class WebViewActivity extends BaseActivity {
      * 添加javascript监听
      */
     private class MyWebViewClient extends WebViewClient {
+
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             LogUtils.e("WebViewActivity-----shouldOverrideUrlLoading-------"+url);

@@ -1,8 +1,8 @@
 package com.ns.yc.lifehelper.ui.data.contract;
 
 
-import com.ns.yc.lifehelper.base.mvp1.BasePresenter;
-import com.ns.yc.lifehelper.base.mvp1.BaseView;
+import com.ns.yc.lifehelper.base.mvp.BasePresenter;
+import com.ns.yc.lifehelper.base.mvp.BaseView;
 import com.ns.yc.lifehelper.model.bean.ImageIconBean;
 import com.ns.yc.lifehelper.ui.main.view.MainActivity;
 
@@ -33,7 +33,6 @@ public interface DataFragmentContract {
         void initGridViewData();
         void initRecycleViewData();
         void bindActivity(MainActivity activity);
-        ArrayList<String> initGvImageData();
     }
 
 

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.LogUtils;
 import com.ns.yc.lifehelper.R;
-import com.ns.yc.lifehelper.base.mvp1.BaseActivity;
+import com.ns.yc.lifehelper.base.mvp.BaseActivity;
 import com.ns.yc.lifehelper.ui.guide.contract.GuideContract;
 import com.ns.yc.lifehelper.ui.guide.presenter.GuidePresenter;
 import com.ns.yc.lifehelper.ui.main.view.MainActivity;
@@ -31,8 +31,7 @@ import cn.ycbjie.ycstatusbarlib.bar.YCAppBar;
  *     revise:
  * </pre>
  */
-public class GuideActivity extends BaseActivity<GuidePresenter> implements
-        GuideContract.View ,View.OnClickListener {
+public class GuideActivity extends BaseActivity<GuidePresenter> implements GuideContract.View ,View.OnClickListener {
 
     @BindView(R.id.iv_splash_ad)
     ImageView ivSplashAd;

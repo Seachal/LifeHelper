@@ -305,7 +305,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
 
             @Override
             public void onPageSelected(int position) {
-                ctlTable.setCurrentTab(position);
+                if(position>=0){
+                    ctlTable.setCurrentTab(position);
+                }
             }
 
             @Override

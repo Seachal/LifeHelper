@@ -10,7 +10,7 @@ import com.alibaba.android.vlayout.DelegateAdapter;
 import com.ns.yc.lifehelper.R;
 import com.ns.yc.lifehelper.base.adapter.BaseBannerPagerAdapter;
 import com.ns.yc.lifehelper.base.adapter.BaseDelegateAdapter;
-import com.ns.yc.lifehelper.base.mvp1.BaseFragment;
+import com.ns.yc.lifehelper.base.mvp.BaseFragment;
 import com.ns.yc.lifehelper.ui.data.view.activity.DoodleViewActivity;
 import com.ns.yc.lifehelper.ui.find.contract.FindFragmentContract;
 import com.ns.yc.lifehelper.ui.find.presenter.FindFragmentPresenter;
@@ -52,8 +52,7 @@ import butterknife.Bind;
  *             v1.5 17年10月3日修改
  * </pre>
  */
-public class FindFragment extends BaseFragment<FindFragmentPresenter>
-        implements FindFragmentContract.View {
+public class FindFragment extends BaseFragment<FindFragmentPresenter> implements FindFragmentContract.View {
 
 
     @Bind(R.id.recyclerView)

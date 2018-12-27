@@ -14,13 +14,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.SizeUtils;
 import com.ns.yc.lifehelper.R;
 import com.ns.yc.lifehelper.base.adapter.BaseBannerPagerAdapter;
-import com.ns.yc.lifehelper.base.mvp1.BaseFragment;
+import com.ns.yc.lifehelper.base.mvp.BaseFragment;
 import com.ns.yc.lifehelper.model.bean.HomeBlogEntity;
 import com.ns.yc.lifehelper.ui.home.contract.HomeFragmentContract;
 import com.ns.yc.lifehelper.ui.home.presenter.HomeFragmentPresenter;
@@ -80,11 +79,15 @@ public class HomeFragment extends BaseFragment<HomeFragmentPresenter> implements
             super.handleMessage(msg);
             switch (msg.what){
                 case 1:
-                    cardViewLayout.setVisibility(View.VISIBLE);
+                    if (cardViewLayout!=null){
+                        cardViewLayout.setVisibility(View.VISIBLE);
+                    }
                     updateGalleryView();
                     break;
                 case 2:
-                    cardViewLayout.setVisibility(View.GONE);
+                    if (cardViewLayout!=null){
+                        cardViewLayout.setVisibility(View.GONE);
+                    }
                     break;
                 default:
                     break;

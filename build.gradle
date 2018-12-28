@@ -3,26 +3,36 @@
 buildscript {
     repositories {
         jcenter()
+        google()
         maven {
             url 'https://maven.google.com/'
-            name 'Google'
+            name
+            'Google'
+        }
+        maven {
+            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.2'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-        classpath "io.realm:realm-gradle-plugin:3.3.2"
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        // classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath "io.realm:realm-gradle-plugin:5.8.0"
+
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        google()
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
         maven { url 'https://jitpack.io' }
+        maven {
+            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+        }
     }
 }
 

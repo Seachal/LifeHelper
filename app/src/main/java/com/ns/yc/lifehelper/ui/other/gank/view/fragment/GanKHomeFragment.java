@@ -28,7 +28,7 @@ import org.yczbj.ycrefreshviewlib.item.RecycleViewItemLine;
 import org.yczbj.ycrefreshviewlib.YCRefreshView;
 import org.yczbj.ycrefreshviewlib.adapter.RecyclerArrayAdapter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * ================================================
@@ -42,7 +42,7 @@ import butterknife.Bind;
 public class GanKHomeFragment extends BaseLazyFragment implements GanKHomeFContract.View {
 
     private static final String TYPE = "type";
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     YCRefreshView recyclerView;
     private GanKHomeActivity activity;
     private String mType;

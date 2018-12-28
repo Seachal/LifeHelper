@@ -24,7 +24,7 @@ import org.greenrobot.eventbus.ThreadMode;
 import org.yczbj.ycrefreshviewlib.YCRefreshView;
 import org.yczbj.ycrefreshviewlib.adapter.RecyclerArrayAdapter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Observer;
@@ -42,7 +42,7 @@ import rx.android.schedulers.AndroidSchedulers;
  */
 public class BookReaderReviewFragment extends BaseFragment {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     YCRefreshView recyclerView;
     private BookReaderReviewActivity activity;
     private static final String TYPE = "type";
@@ -89,7 +89,7 @@ public class BookReaderReviewFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
         EventBusUtils.unregister(this);
     }
 

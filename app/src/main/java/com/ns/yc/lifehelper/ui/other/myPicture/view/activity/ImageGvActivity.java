@@ -25,7 +25,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.ycbjie.ycthreadpoollib.PoolThread;
 import cn.ycbjie.ycthreadpoollib.callback.AsyncCallback;
 
@@ -33,37 +33,37 @@ import cn.ycbjie.ycthreadpoollib.callback.AsyncCallback;
 public class ImageGvActivity extends BaseActivity implements View.OnClickListener {
 
 
-    @Bind(R.id.tv_title_left)
+    @BindView(R.id.tv_title_left)
     TextView tvTitleLeft;
-    @Bind(R.id.ll_title_menu)
+    @BindView(R.id.ll_title_menu)
     FrameLayout llTitleMenu;
-    @Bind(R.id.toolbar_title)
+    @BindView(R.id.toolbar_title)
     TextView toolbarTitle;
-    @Bind(R.id.iv_right_img)
+    @BindView(R.id.iv_right_img)
     ImageView ivRightImg;
-    @Bind(R.id.ll_search)
+    @BindView(R.id.ll_search)
     FrameLayout llSearch;
-    @Bind(R.id.tv_title_right)
+    @BindView(R.id.tv_title_right)
     TextView tvTitleRight;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.iv_author_img)
+    @BindView(R.id.iv_author_img)
     CircleImageView ivAuthorImg;
-    @Bind(R.id.tv_author)
+    @BindView(R.id.tv_author)
     TextView tvAuthor;
-    @Bind(R.id.tv_date)
+    @BindView(R.id.tv_date)
     TextView tvDate;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.gv_img)
+    @BindView(R.id.gv_img)
     ImageGridView gvImg;
-    @Bind(R.id.iv_img)
+    @BindView(R.id.iv_img)
     ImageView ivImg;
-    @Bind(R.id.cv_recommend)
+    @BindView(R.id.cv_recommend)
     CardView cvRecommend;
-    @Bind(R.id.tv_save)
+    @BindView(R.id.tv_save)
     TextView tvSave;
-    @Bind(R.id.tv_share)
+    @BindView(R.id.tv_share)
     TextView tvShare;
 
     private ArrayList<String> list;

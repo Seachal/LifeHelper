@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.ns.yc.lifehelper"
@@ -20,6 +20,8 @@ android {
         multiDexEnabled true
         // 支持模糊视图
         renderscriptSupportModeEnabled true
+
+
     }
 
     buildTypes {
@@ -28,7 +30,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
-        debug{
+        debug {
             // 不显示Log
             buildConfigField "boolean", "LOG_DEBUG", "false"
             //混淆
@@ -41,10 +43,11 @@ android {
         }
     }
 
-    //jdk1.7
+    //jdk1.7 -8 //     解决 Caused by: com.android.builder.dexing.DexArchiveBuilderException: Failed to process /Users/ctitc/.gradle/cac
+    //
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     //避免项目中存在相同的jar包，导致运行失败
@@ -58,12 +61,12 @@ android {
     }
 
     //过滤掉不支持的平台
-    packagingOptions {
-        exclude "lib/arm64-v8a/librealm-jni.so"
-        exclude "lib/mips/librealm-jni.so"
-        exclude "lib/x86/librealm-jni.so"
-        exclude "lib/x86_64/librealm-jni.so"
-    }
+//    packagingOptions {
+//        exclude "lib/arm64-v8a/librealm-jni.so"
+//        exclude "lib/mips/librealm-jni.so"
+//        exclude "lib/x86/librealm-jni.so"
+//        exclude "lib/x86_64/librealm-jni.so"
+//    }
 
 }
 
@@ -81,7 +84,6 @@ dependencies {
     compile 'com.android.support:support-annotations:25.4.0'
     compile 'com.android.support:multidex:1.0.1'
 
-
     //网络请求retrofit2+Rx
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
@@ -95,9 +97,11 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
 
     //注解
-    compile 'com.jakewharton:butterknife:7.0.1'                 //黄牛刀
-    compile 'com.google.dagger:dagger:2.13'                     //注解
-    apt 'com.google.dagger:dagger-compiler:2.13'
+    compile 'com.jakewharton:butterknife:8.8.1'                 //黄牛刀
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.google.dagger:dagger:2.20'                     //注解
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.20'
+    // apt 'com.google.dagger:dagger-compiler:2.13'
 
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.bumptech.glide:glide:3.8.0'

@@ -52,7 +52,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         if (mPresenter != null){
             mPresenter.unSubscribe();
         }
-        ButterKnife.unbind(this);
+
         //测试内存泄漏，正式一定要隐藏
         initLeakCanary();
     }

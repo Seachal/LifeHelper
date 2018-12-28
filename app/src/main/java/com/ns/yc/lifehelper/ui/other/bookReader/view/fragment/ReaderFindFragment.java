@@ -21,7 +21,7 @@ import org.yczbj.ycrefreshviewlib.item.RecycleViewItemLine;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -36,7 +36,7 @@ import butterknife.ButterKnife;
 public class ReaderFindFragment extends BaseFragment {
 
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
     private BookReaderActivity activity;
     private List<FindBean> mList = new ArrayList<>();
@@ -57,7 +57,7 @@ public class ReaderFindFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
     }
 
 

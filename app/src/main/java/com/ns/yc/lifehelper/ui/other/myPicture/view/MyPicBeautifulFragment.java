@@ -23,7 +23,7 @@ import com.ns.yc.lifehelper.ui.other.myPicture.bean.PicBeautifulMainBean;
 import com.ns.yc.lifehelper.ui.other.myPicture.util.BeautifulPicUtils;
 import com.squareup.picasso.Picasso;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -40,9 +40,9 @@ import io.realm.RealmResults;
 public class MyPicBeautifulFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
 
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
-    @Bind(R.id.refresher)
+    @BindView(R.id.refresher)
     SwipeRefreshLayout refresher;
     private String mType;
     private static String TYPE = "wx";
@@ -128,7 +128,7 @@ public class MyPicBeautifulFragment extends Fragment implements SwipeRefreshLayo
     public void onDestroyView() {
         activity.unregisterReceiver(Receiver);
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
     }
 
     @Override

@@ -46,7 +46,7 @@ import com.pedaily.yc.ycdialoglib.customToast.ToastUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -64,25 +64,25 @@ public class MainActivity extends BaseActivity<MainPresenter> implements View.On
         , EasyPermissions.PermissionCallbacks, MainContract.View {
 
 
-    @Bind(R.id.fl_title_menu)
+    @BindView(R.id.fl_title_menu)
     FrameLayout flTitleMenu;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.vp_home)
+    @BindView(R.id.vp_home)
     NoSlidingViewPager vpHome;
-    @Bind(R.id.ctl_table)
+    @BindView(R.id.ctl_table)
     CommonTabLayout ctlTable;
-    @Bind(R.id.ll_main)
+    @BindView(R.id.ll_main)
     LinearLayout llMain;
-    @Bind(R.id.setting)
+    @BindView(R.id.setting)
     TextView setting;
-    @Bind(R.id.quit)
+    @BindView(R.id.quit)
     TextView quit;
-    @Bind(R.id.nav_view)
+    @BindView(R.id.nav_view)
     NavigationView navView;
-    @Bind(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
 
     private ImageView ivAvatar;

@@ -22,7 +22,7 @@ import com.ns.yc.lifehelper.utils.rxUtils.RxUtil;
 import org.yczbj.ycrefreshviewlib.YCRefreshView;
 import org.yczbj.ycrefreshviewlib.adapter.RecyclerArrayAdapter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Observer;
@@ -42,7 +42,7 @@ import rx.schedulers.Schedulers;
 public class SubCategoryFragment extends BaseFragment {
 
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     YCRefreshView recyclerView;
     private SubCategoryListActivity activity;
     private String name = "";
@@ -80,7 +80,7 @@ public class SubCategoryFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
     }
 
     @Override

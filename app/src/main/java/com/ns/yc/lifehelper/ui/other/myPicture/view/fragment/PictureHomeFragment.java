@@ -14,7 +14,7 @@ import com.ns.yc.lifehelper.ui.other.myPicture.adapter.PictureHomeAdapter;
 import org.yczbj.ycrefreshviewlib.YCRefreshView;
 import org.yczbj.ycrefreshviewlib.adapter.RecyclerArrayAdapter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
 public class PictureHomeFragment extends BaseFragment {
 
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     YCRefreshView recyclerView;
     private MyPictureActivity activity;
     private PictureHomeAdapter adapter;
@@ -78,7 +78,7 @@ public class PictureHomeFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
     }
 
 

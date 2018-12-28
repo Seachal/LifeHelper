@@ -7,7 +7,6 @@ import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.blankj.utilcode.util.Utils;
-import com.ns.yc.lifehelper.comment.config.AppConfig;
 import com.ns.yc.lifehelper.comment.Constant;
 import com.ns.yc.lifehelper.inter.callback.LogCallback;
 import com.ns.yc.lifehelper.service.InitializeService;
@@ -132,7 +131,8 @@ public class BaseApplication extends Application {
         } catch (Exception e) {
             Log.e("异常",e.getMessage());
         }
-        Realm.init(instance);
+//        Realm.init(instance);
+        Realm.init(getApplicationContext());
         RealmConfiguration realmConfig = new RealmConfiguration
                 .Builder()
                 .name(Constant.REALM_NAME)

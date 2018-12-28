@@ -27,7 +27,7 @@ import org.yczbj.ycrefreshviewlib.adapter.RecyclerArrayAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
@@ -44,7 +44,7 @@ import rx.schedulers.Schedulers;
  */
 public class SubTopRankFragment extends BaseFragment {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     YCRefreshView recyclerView;
     private SubTopRankActivity activity;
     private String mType;
@@ -83,7 +83,7 @@ public class SubTopRankFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
     }
 
     @Override

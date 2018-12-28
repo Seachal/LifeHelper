@@ -68,7 +68,7 @@ public abstract class BaseStateFragment<T extends BasePresenter>  extends Fragme
         if (mPresenter != null){
             mPresenter.unSubscribe();
         }
-        ButterKnife.unbind(this);
+
         initLeakCanary();             //测试内存泄漏，正式一定要隐藏
     }
 

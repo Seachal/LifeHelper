@@ -52,7 +52,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import cn.ycbjie.ycthreadpoollib.PoolThread;
 import cn.ycbjie.ycthreadpoollib.callback.AsyncCallback;
 
@@ -71,17 +71,17 @@ public class DataFragment extends BaseFragment<DataFragmentPresenter> implements
         , DataFragmentContract.View {
 
 
-    @Bind(R.id.gridView)
+    @BindView(R.id.gridView)
     MyGridView gridView;
-    @Bind(R.id.vp_pager)
+    @BindView(R.id.vp_pager)
     ViewPager vpPager;
-    @Bind(R.id.ll_points)
+    @BindView(R.id.ll_points)
     LinearLayout llPoints;
-    @Bind(R.id.tv_note_edit)
+    @BindView(R.id.tv_note_edit)
     TextView tvNoteEdit;
-    @Bind(R.id.tv_news_zhi_hu)
+    @BindView(R.id.tv_news_zhi_hu)
     TextView tvNewsZhiHu;
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     YCRefreshView recyclerView;
 
 

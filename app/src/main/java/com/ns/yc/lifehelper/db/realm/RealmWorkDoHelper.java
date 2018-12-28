@@ -2,8 +2,8 @@ package com.ns.yc.lifehelper.db.realm;
 
 import android.text.TextUtils;
 
-import com.ns.yc.lifehelper.comment.Constant;
 import com.ns.yc.lifehelper.base.app.BaseApplication;
+import com.ns.yc.lifehelper.comment.Constant;
 import com.ns.yc.lifehelper.ui.other.workDo.data.DateUtils;
 import com.ns.yc.lifehelper.ui.other.workDo.model.TaskDetailEntity;
 
@@ -59,7 +59,8 @@ public class RealmWorkDoHelper {
 
     public RealmResults<TaskDetailEntity> findAllTask() {
         return realm.where(TaskDetailEntity.class)
-                .findAllSorted("timeStamp");
+//                .findAllSorted("timeStamp");
+                .sort("timeStamp").findAll();
     }
 
 
@@ -67,7 +68,9 @@ public class RealmWorkDoHelper {
         return realm
                 .where(TaskDetailEntity.class)
                 .equalTo("dayOfWeek", dayOfWeek)
-                .findAllSorted("timeStamp");
+//                .findAllSorted("timeStamp");
+                .sort("timeStamp").findAll();
+
     }
 
     public RealmResults<TaskDetailEntity> findUnFinishedTasks(int dayOfWeek) {
@@ -75,7 +78,8 @@ public class RealmWorkDoHelper {
                 .where(TaskDetailEntity.class)
                 .equalTo("dayOfWeek", dayOfWeek)
                 .notEqualTo("state", Constant.TaskState.FINISHED)
-                .findAllSorted("timeStamp");
+//                .findAllSorted("timeStamp");
+                .sort("timeStamp").findAll();
     }
 
 
@@ -127,7 +131,9 @@ public class RealmWorkDoHelper {
                 .contains("content", like)
                 .or()
                 .contains("title", like)
-                .findAllSorted("timeStamp", Sort.DESCENDING);
+//                .findAllSorted("timeStamp", Sort.DESCENDING);
+                .sort("timeStamp",Sort.DESCENDING).findAll();
+
     }
 
 

@@ -53,7 +53,7 @@ public abstract class BaseStateActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
+
         //测试内存泄漏，正式一定要隐藏
         initLeakCanary();
     }
